@@ -1,7 +1,7 @@
 import { MdLocationOn, MdEmail } from 'react-icons/md';
-import {FaLinkedinIn,FaGlobeAmericas,FaFacebookF,FaTwitter} from 'react-icons/fa';
-import {FiInstagram} from 'react-icons/fi';
-import {IoLogoWhatsapp} from 'react-icons/io';
+import { FaLinkedinIn, FaGlobeAmericas, FaFacebookF, FaTwitter } from 'react-icons/fa';
+import { FiInstagram } from 'react-icons/fi';
+import { IoLogoWhatsapp } from 'react-icons/io';
 function Education() {
     return (
         <div className="contactDiv">
@@ -12,22 +12,24 @@ function Education() {
                 <div className='contactInfo'>
                     Contact info
                     <table>
-                        <tr>
-                            <td width='15%'><MdLocationOn /></td>
-                            <td>New Delhi, India</td>
-                        </tr>
-                        <tr>
-                            <td><MdEmail /></td>
-                            <td>sachinvashist82@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td><IoLogoWhatsapp /></td>
-                            <td>+918860496464</td>
-                        </tr>
-                        <tr>
-                            <td><FaGlobeAmericas /></td>
-                            <td>sachinvashist.tk</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td width='15%'><MdLocationOn /></td>
+                                <td>New Delhi, India</td>
+                            </tr>
+                            <tr>
+                                <td><MdEmail /></td>
+                                <td>sachinvashist82@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td><IoLogoWhatsapp /></td>
+                                <td>+918860496464</td>
+                            </tr>
+                            <tr>
+                                <td><FaGlobeAmericas /></td>
+                                <td>sachinvashist.tk</td>
+                            </tr>
+                        </tbody>
                     </table>
                     Follow Me
                     <p className='iconsDiv'>
