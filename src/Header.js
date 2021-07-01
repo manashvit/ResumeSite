@@ -1,14 +1,15 @@
-import { useEffect,useState } from "react"
-
+import { useEffect, useState } from "react"
+import { CgMenuGridR ,CgClose} from 'react-icons/cg'
 function Header() {
-    const [activeLink,changeLink]=useState('homeDiv')
-    const linkArray=[
-        {title:'Home',linkDiv:'homeDiv'},
-        {title:'About Me',linkDiv:'aboutDiv'},
-        {title:'Skills',linkDiv:'skillsDiv'},
-        {title:'Qualifications',linkDiv:'qualDiv'},
-        {title:'Portfolio',linkDiv:'workDiv'},
-        {title:'Contact',linkDiv:'contactDiv'}
+    const [activeLink, changeLink] = useState('homeDiv')
+    const [openMenu, changeMenu] = useState(false)
+    const linkArray = [
+        { title: 'Home', linkDiv: 'homeDiv' },
+        { title: 'About Me', linkDiv: 'aboutDiv' },
+        { title: 'Skills', linkDiv: 'skillsDiv' },
+        { title: 'Qualifications', linkDiv: 'qualDiv' },
+        { title: 'Portfolio', linkDiv: 'workDiv' },
+        { title: 'Contact', linkDiv: 'contactDiv' }
     ]
 
     useEffect(()=>{
@@ -16,11 +17,18 @@ function Header() {
         elm.scrollIntoView({behavior:'smooth'})
     },[activeLink])
 
+    const handleLink=(linkDiv)=>{
+        changeMenu(false)
+        changeLink(linkDiv)
+    }
     return (
         <div className="cstHead" >
             <div>Hola !</div>
-            <div className="cstNav">
-                {linkArray.map((link,index)=><span key={index} onClick={()=>changeLink(link.linkDiv)} className={activeLink===link.linkDiv?'active':''}> {link.title} </span>)}
+            <div className="cstNavMenu" onClick={()=>changeMenu(!openMenu)}>
+                {!openMenu?<CgMenuGridR />:<CgClose/>}
+            </div>
+            <div className={"cstNav "+(openMenu?'open':'')}>
+                {linkArray.map((link, index) => <span key={index} onClick={() => handleLink(link.linkDiv)} className={activeLink === link.linkDiv ? 'active' : ''}> {link.title} </span>)}
             </div >
         </div>
     );
