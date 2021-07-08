@@ -1,5 +1,5 @@
 import AboutImg from '../assets/images/aboutImg.jpg'
-
+import Achivements from './Achivements'
 function Work() {
   return (
     <div className="workDiv">
@@ -69,20 +69,9 @@ function Work() {
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
           </div>
         </div>
-        <div className='workCard'>
-          <img src={AboutImg} alt="img" />
-          <div>
-            <p>Javascript Intern</p>
-            Honda Car Limited<br />
-            JUNE-JULY 2014
-          </div>
-          <div className='workOverlay'>
-            <div>Description </div>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          </div>
-        </div>
-        
+       
       </div>
+      <Achivements/>
     </div>
   );
 }

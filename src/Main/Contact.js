@@ -1,6 +1,6 @@
 import { MdLocationOn, MdEmail } from 'react-icons/md';
 import { FaLinkedinIn, FaGlobeAmericas, FaFacebookF, FaTwitter } from 'react-icons/fa';
-import { FiInstagram } from 'react-icons/fi';
+import { FiInstagram ,FiGithub} from 'react-icons/fi';
 import { IoLogoWhatsapp } from 'react-icons/io';
 function Education() {
     return (
@@ -35,6 +35,7 @@ function Education() {
                     <p className='iconsDiv'>
                         <span><FaLinkedinIn /></span>
                         <span><FaTwitter /></span>
+                        <span><FiGithub /></span>
                         <span><FaFacebookF /></span>
                         <span><FiInstagram /></span>
                     </p>

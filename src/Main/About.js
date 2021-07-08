@@ -1,23 +1,33 @@
-import AboutImg from '../assets/images/aboutImg.jpg'
+import AboutImg from '../assets/images/aboutImg.jpg';
+import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im';
+import { useDispatch } from 'react-redux';
+import { makeActive } from '../store/headerSlice';
+
 function About() {
+  const dispatch=useDispatch();
   return (
     <div className="aboutDiv">
       <div>
         <img src={AboutImg} alt="img" />
       </div>
       <div>
-        <div className='divHeading' style={{alignItems:'flex-start'}}> 
+        <div className='divHeading' style={{ alignItems: 'flex-start' }}>
           About Me
         </div>
         <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nu pariatur excepteur sint occaecat.
+          Six Sigma GB certified Full Stack Web Developer working as Assistant Manager in GENPACT, India with a total experience of 5 years and currently looking forward to growing my career in FrontEnd or Backend Development. Skilled in UI and APIs development on MERN Stack along with adequate hands-on experience in Cloud Computing (AWS) and Dev-Ops technologies.
+          <br />
+          <br />
+          Not just Technical skills but team skills, quick qdaptability, composed nature, and continuous learning attitude constitutes the basic foundation of my career which helped me to achieve various Organisation-Wide recognizations including "Rising Star or the quarter 2020" and "Operational Excellence Award".
+          <br />
+          <br />
+          <i><ImQuotesLeft /> &nbsp;  Big Ambitions and subtle steps &nbsp;<ImQuotesRight /></i>
         </div>
         <div>
-          <button className='cstbtn'>
+          <button className='cstbtn' onClick={()=>dispatch(makeActive('skillsDiv'))}>
             View Skills
           </button>
-          <button className='cstbtn' style={{ background: 'transparent' }}>
+          <button className='cstbtn diffBtn'>
             Download CV
           </button>
         </div>

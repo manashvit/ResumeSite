@@ -17,7 +17,7 @@ const headerSlice = createSlice({
       let divs = [...document.getElementsByClassName("mainDiv")[0].children],
         activeLink = action.payload?action.payload:'homeDiv',
         elm = document.getElementsByClassName(activeLink)[0];
-
+        elm.scrollTop = 0;
       divs.forEach((div) => {
         if (div.className.indexOf('awayDiv') === -1)
           div.className += ' awayDiv'

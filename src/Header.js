@@ -15,12 +15,16 @@ function Header() {
     const handleLink = (linkDiv) => {
         changeMenu(false)
         dispatch(makeActive(linkDiv))
+        if(window.innerWidth<450) document.getElementsByTagName('body')[0].style.overflow='auto'
     }
 
     return (
         <div className="cstHead" >
             <div>Hola !</div>
-            <div className="cstNavMenu" onClick={() => changeMenu(!openMenu)}>
+            <div className="cstNavMenu" onClick={() => {
+                document.getElementsByTagName('body')[0].style.overflow=openMenu?'auto':'hidden'
+                changeMenu(!openMenu)
+            }}>
                 {!openMenu ? <CgMenuGridR /> : <CgClose />}
             </div>
             <div className={"cstNav " + (openMenu ? 'open' : '')}>
