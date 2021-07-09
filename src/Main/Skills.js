@@ -10,7 +10,7 @@ function Skills() {
         Skills
       </div>
       <div>
-        My interpersonal skills allowed me to participate effectively as a member of different teams, satisfy customer’s and client’s expectations, make decisions and solve problems with other people, and generally work effectively with team members. It helped me to make and live in less stressful working environment.
+        My interpersonal skills allowed me to participate effectively as a member or lead in different teams, satisfy client’s expectations, make decisions and solve problems with other people, and work effectively with team members. It helped me to make and live in a less stressful working environment.
       </div>
 
       <div className='skillsCircle'>
@@ -33,7 +33,7 @@ function Skills() {
           </div>
         )}
       </div>
-      <button className='cstbtn' onClick={() => dispatch(makeActive('qualDiv'))}>
+      <button className='cstbtn nxtBtn' onClick={() => dispatch(makeActive('qualDiv'))}>
         My Qualifications
       </button>
       <br/>

@@ -9,9 +9,7 @@ function Qualifications() {
       <div className='divHeading'>
         Qualifications
       </div>
-      <div>
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natur
-      </div>
+     
       <div className='eduCard'>
         {qualData.map((qual, index) =>
           <div key={index}>
@@ -24,7 +22,7 @@ function Qualifications() {
           </div>
         )}
       </div>
-      <button className='cstbtn' onClick={() => dispatch(makeActive('workDiv'))}>
+      <button className='cstbtn nxtBtn' onClick={() => dispatch(makeActive('workDiv'))}>
         My Work
       </button>
     </div>

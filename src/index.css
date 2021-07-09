@@ -174,7 +174,7 @@ body {
 
 .homeDiv.addHire>div:last-child {
     right: 50%;
-    background-image: url(assets/images/homeImg2.jpg);
+    background-image: url(assets/images/homeImg1.png);
 }
 
 .homeDiv>div {
@@ -203,6 +203,20 @@ body {
     border-radius: 5px;
     margin-top: var(--defaultgap);
     margin-right: 15px;
+}
+
+.backBtn {
+    position: fixed;
+    top: -90px;
+    right: 20px;
+    transform: rotate(-90deg);
+    z-index: 111;
+    min-width: 90px;
+    transition: all 0.6s;
+}
+
+.backBtn.showUpBtn {
+    top: calc(50vh - 50px);
 }
 
 .iconsDiv {
@@ -474,15 +488,16 @@ div.qualDiv, div.contactDiv {
     display: flex;
     width: 48%;
     margin: 2% 0%;
-    min-height: 220px;
+    /* min-height: 220px; */
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
     border-bottom: 4px solid var(--activeColor);
+    line-height: 1.4;
 }
 
 .workCard img {
-    width: 200px;
+    width: 130px;
     margin-right: 5%;
 }
 
@@ -491,12 +506,14 @@ div.qualDiv, div.contactDiv {
     font-size: var(--h2);
     color: white;
     font-weight: bold;
+    text-transform: initial;
 }
 
 .workCard>div:nth-child(2) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-transform: uppercase;
 }
 
 .workOverlay {
@@ -511,6 +528,8 @@ div.qualDiv, div.contactDiv {
     display: flex;
     flex-direction: column;
     background: var(--activeColor);
+    overflow: auto;
+    line-height: 1;
 }
 
 .workOverlay>div {
@@ -542,7 +561,7 @@ div.qualDiv, div.contactDiv {
 .contactInfo td {
     padding: 8px 0;
     font-size: var(--h4);
-    text-transform: lowercase;
+    text-transform: initial;
 }
 
 .contactInfo table {
@@ -620,12 +639,18 @@ div.qualDiv, div.contactDiv {
     border-radius: 50%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 40%;
     background-color: white;
     /* border: 10px solid var(--activeColor); */
     border-right: 0;
-    box-shadow: 0px 0px 7px 11px rgb(255 255 255 / 50%);
+    /* box-shadow: 0px 0px 7px 11px rgb(255 255 255 / 50%); */
     border-top: 0;
+    transition: all 0.1s;
+}
+
+.achCard:hover>div:first-child {
+    background-size: 55%;
+    box-shadow: 0px 0px 7px 11px rgb(255 255 255 / 50%);
 }
 
 .achCard>div:nth-child(2) {
@@ -645,9 +670,10 @@ div.qualDiv, div.contactDiv {
     padding-top: 65px;
 }
 
-.achCard>div:last-child{
+.achCard>div:last-child {
     padding: 10px;
 }
+
 /* -----------------------------  */
 
 @media only screen and (max-width: 450px) {
@@ -665,13 +691,13 @@ div.qualDiv, div.contactDiv {
     }
     .divHeading {
         margin-bottom: 20px;
-        text-align: left;
+        text-align: center;
     }
     .cstbtn {
         width: 100%;
         margin-right: 0;
     }
-    .cstNav span:after, .homeDiv>div:nth-child(2)>div, .homeDiv .cstbtn {
+    .cstNav span:after, .homeDiv>div:nth-child(2)>div, .homeDiv .cstbtn, .backBtn,.nxtBtn {
         display: none;
     }
     .homeDiv>div, .aboutDiv>div, .skillsCard>div, .eduCard>div, .workCard, .contactInfo, .contactForm, .contactForm>div {
@@ -744,16 +770,20 @@ div.qualDiv, div.contactDiv {
     .workCard {
         padding: 15px;
         flex-direction: column;
+        text-align: center;
     }
     .workCard img {
-        width: 100%;
-        margin-bottom: 15px;
+        width: 35%;
+        margin: 15px auto;
+    }
+    .workOverlay{
+        text-align: left;
     }
     .contactForm {
         order: -1;
         margin-bottom: 30px;
     }
-    .achDiv{
+    .achDiv {
         margin-top: 20px;
     }
     .achCard {
@@ -768,7 +798,7 @@ div.qualDiv, div.contactDiv {
         top: 16px;
         left: 16px;
     }
-    .achCard>div:nth-child(2),.achCard>div:nth-child(3) {
+    .achCard>div:nth-child(2), .achCard>div:nth-child(3) {
         height: 64px;
         font-size: var(--h3);
         padding: 10px;
@@ -779,7 +809,9 @@ div.qualDiv, div.contactDiv {
         text-align: right;
         margin: 0;
     }
-
+    .achCard>div:nth-child(3) {
+        height: auto;
+    }
 }
 
 @media only screen and (min-width: 451px) and (max-width: 1100px) {
@@ -792,7 +824,7 @@ div.qualDiv, div.contactDiv {
         --h5: 16px;
         --defaultgap: 25px;
     }
-    .homeDiv .cstbtn, .homeDiv>div:nth-child(2)>div {
+    .homeDiv .cstbtn:not(.diffBtn), .homeDiv>div:nth-child(2)>div {
         display: none;
     }
     .cstNav {
@@ -825,7 +857,7 @@ div.qualDiv, div.contactDiv {
     .circle {
         padding: 5px;
     }
-    .achDiv{
+    .achDiv {
         margin-top: 20px;
     }
     .achCard {
@@ -840,7 +872,7 @@ div.qualDiv, div.contactDiv {
         top: 16px;
         left: 16px;
     }
-    .achCard>div:nth-child(2),.achCard>div:nth-child(3) {
+    .achCard>div:nth-child(2), .achCard>div:nth-child(3) {
         height: 64px;
         font-size: var(--h3);
         padding: 10px;
@@ -850,6 +882,22 @@ div.qualDiv, div.contactDiv {
         align-items: center;
         text-align: right;
         margin: 0;
+    }
+    .achCard>div:nth-child(3) {
+        height: auto;
+    }
+    .backBtn {
+        top: -90px;
+        right: -30px;
+        position: fixed;
+        min-height: 30px;
+    }
+    .backBtn svg {
+        width: 30px;
+        height: 30px;
+    }
+    .workExDesp>div {
+        width: 25%;
     }
 }
 

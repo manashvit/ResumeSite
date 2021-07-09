@@ -2,7 +2,8 @@ import { MdLocationOn, MdEmail } from 'react-icons/md';
 import { FaLinkedinIn, FaGlobeAmericas, FaFacebookF, FaTwitter } from 'react-icons/fa';
 import { FiInstagram ,FiGithub} from 'react-icons/fi';
 import { IoLogoWhatsapp } from 'react-icons/io';
-function Education() {
+function Contact(props) {
+    const { goToLink } = props;
     return (
         <div className="contactDiv">
             <div className='divHeading'>
@@ -27,17 +28,17 @@ function Education() {
                             </tr>
                             <tr>
                                 <td><FaGlobeAmericas /></td>
-                                <td>sachinvashist.tk</td>
+                                <td>ersachinvashist.github.io/ResumeSite</td>
                             </tr>
                         </tbody>
                     </table>
                     Follow Me
                     <p className='iconsDiv'>
-                        <span><FaLinkedinIn /></span>
-                        <span><FaTwitter /></span>
-                        <span><FiGithub /></span>
-                        <span><FaFacebookF /></span>
-                        <span><FiInstagram /></span>
+                        <span onClick={() => goToLink('linkedin')}><FaLinkedinIn /></span>
+                        <span onClick={() => goToLink('twitter')}><FaTwitter /></span>
+                        <span onClick={() => goToLink('github')}><FiGithub /></span>
+                        <span onClick={() => goToLink('fb')}><FaFacebookF /></span>
+                        <span onClick={() => goToLink('insta')}><FiInstagram /></span>
                     </p>
                 </div>
                 <div className='contactForm'>
@@ -66,4 +67,4 @@ function Education() {
     );
 }
 
-export default Education;
+export default Contact;
