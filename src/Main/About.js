@@ -27,9 +27,9 @@ function About() {
           <button className='cstbtn nxtBtn' onClick={()=>dispatch(makeActive('skillsDiv'))}>
             My Artillery
           </button>
-          <button className='cstbtn diffBtn'>
+          {/* <button className='cstbtn diffBtn'>
             Download CV
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
