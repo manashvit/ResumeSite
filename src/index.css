@@ -54,6 +54,10 @@ body {
     position: relative;
 }
 
+.cstToaster>div{
+    background-color: var(--activeColor)!important;
+}
+
 .hoverTitle>b {
     font-size: 20px;
     position: absolute;
@@ -217,6 +221,12 @@ body {
 
 .backBtn.showUpBtn {
     top: calc(50vh - 50px);
+}
+
+.cstbtn:disabled {
+    background: var(--lvl3Color)!important;
+    cursor: auto;
+    color: inherit!important;
 }
 
 .iconsDiv {
@@ -594,9 +604,14 @@ div.qualDiv, div.contactDiv {
     outline: none;
     margin-top: 15px;
     resize: none;
-    background: #444444;
+    background: var(--lvl3Color);
     color: #cccccc;
     font-family: 'Maven Pro', sans-serif;
+}
+
+.erroredField {
+    box-sizing: border-box;
+    border-bottom: 2px solid red!important;
 }
 
 .contactForm>div:nth-last-child(2) {
@@ -697,7 +712,7 @@ div.qualDiv, div.contactDiv {
         width: 100%;
         margin-right: 0;
     }
-    .cstNav span:after, .homeDiv>div:nth-child(2)>div, .homeDiv .cstbtn, .backBtn,.nxtBtn {
+    .cstNav span:after, .homeDiv>div:nth-child(2)>div, .homeDiv .cstbtn, .backBtn, .nxtBtn {
         display: none;
     }
     .homeDiv>div, .aboutDiv>div, .skillsCard>div, .eduCard>div, .workCard, .contactInfo, .contactForm, .contactForm>div {
@@ -776,7 +791,7 @@ div.qualDiv, div.contactDiv {
         width: 35%;
         margin: 15px auto;
     }
-    .workOverlay{
+    .workOverlay {
         text-align: left;
     }
     .contactForm {

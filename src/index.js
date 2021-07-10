@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import store from './store/setup';
+import 'react-toastify/dist/ReactToastify.css';
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
