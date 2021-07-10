@@ -170,15 +170,15 @@ body {
     background-color: #2B2C2C;
     width: 60%;
     height: 70%;
-    background-size: contain;
+    background-size: 110%;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(assets/images/homeImg1.png);
+    background-image: url(assets/images/mypic4.png);
 }
 
 .homeDiv.addHire>div:last-child {
     right: 50%;
-    background-image: url(assets/images/homeImg1.png);
+    background-image: url(assets/images/mypic4.png);
 }
 
 .homeDiv>div {
@@ -913,6 +913,9 @@ div.qualDiv, div.contactDiv {
     }
     .workExDesp>div {
         width: 25%;
+    }
+    .homeDiv>div:last-child{
+        background-size: 100%;
     }
 }
 

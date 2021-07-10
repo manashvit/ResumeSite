@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ResumeSite/static/css/main.51dd4231.chunk.css",
+    "main.css": "/ResumeSite/static/css/main.895d0847.chunk.css",
     "main.js": "/ResumeSite/static/js/main.ea267d45.chunk.js",
     "main.js.map": "/ResumeSite/static/js/main.ea267d45.chunk.js.map",
     "runtime-main.js": "/ResumeSite/static/js/runtime-main.b075afd6.js",
@@ -10,19 +10,19 @@
     "static/js/2.a1a50f83.chunk.js.map": "/ResumeSite/static/js/2.a1a50f83.chunk.js.map",
     "index.html": "/ResumeSite/index.html",
     "static/css/2.97503911.chunk.css.map": "/ResumeSite/static/css/2.97503911.chunk.css.map",
-    "static/css/main.51dd4231.chunk.css.map": "/ResumeSite/static/css/main.51dd4231.chunk.css.map",
+    "static/css/main.895d0847.chunk.css.map": "/ResumeSite/static/css/main.895d0847.chunk.css.map",
     "static/js/2.a1a50f83.chunk.js.LICENSE.txt": "/ResumeSite/static/js/2.a1a50f83.chunk.js.LICENSE.txt",
     "static/media/genpact.f1d7348f.png": "/ResumeSite/static/media/genpact.f1d7348f.png",
-    "static/media/index.css": "/ResumeSite/static/media/skillBack.71fea2b8.jpg",
     "static/media/honda.8c69b901.png": "/ResumeSite/static/media/honda.8c69b901.png",
     "static/media/mypic2.69462f09.JPG": "/ResumeSite/static/media/mypic2.69462f09.JPG",
+    "static/media/index.css": "/ResumeSite/static/media/skillBack.71fea2b8.jpg",
     "static/media/node.d0d48a13.png": "/ResumeSite/static/media/node.d0d48a13.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b075afd6.js",
     "static/css/2.97503911.chunk.css",
     "static/js/2.a1a50f83.chunk.js",
-    "static/css/main.51dd4231.chunk.css",
+    "static/css/main.895d0847.chunk.css",
     "static/js/main.ea267d45.chunk.js"
   ]
 }
