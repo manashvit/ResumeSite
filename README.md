@@ -1,2 +1,0 @@
-# ResumeSite
-My Resume Website
