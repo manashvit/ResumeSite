@@ -1,11 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const scrollDiv = (activeLink, state) => {
-  let elm = document.getElementsByClassName(activeLink)[0];
+  let al=activeLink || 'homeDiv',elm = document.getElementsByClassName(al)[0];
   elm.scrollTop = 0;
-  elm.scrollIntoView({ behavior: 'smooth' })
+  setTimeout(() => {
+    elm.scrollIntoView({ behavior: 'smooth' })
+  },activeLink?0:500)
+  
   state.links.forEach((item) => {
-    item.active = item.linkDiv === activeLink
+    item.active = item.linkDiv === al
   })
 }
 
@@ -23,16 +26,16 @@ const headerSlice = createSlice({
   },
   reducers: {
     makeActive: (state, action) => {
-      scrollDiv(action.payload || 'homeDiv', state)
+      scrollDiv(action.payload, state)
     },
     goUpSection: (state, action) => {
       let upIndex = (state.links.findIndex(link => link.active)) - 1,
         activeLink = state.links[upIndex].linkDiv;
-      scrollDiv(activeLink || 'homeDiv', state)
+      scrollDiv(activeLink, state)
     }
   }
 })
 
-export const { makeActive ,goUpSection} = headerSlice.actions
+export const { makeActive, goUpSection } = headerSlice.actions
 
 export default headerSlice.reducer

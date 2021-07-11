@@ -752,6 +752,9 @@ div.qualDiv, div.contactDiv {
         margin-bottom: 30px;
         white-space: pre;
     }
+    .homeDiv {
+        justify-content: flex-start!important;
+    }
     .homeDiv>div:last-child {
         position: static;
         transition: all 0.5s;

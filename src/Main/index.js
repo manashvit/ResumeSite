@@ -7,7 +7,6 @@ import Skills from './Skills';
 import Qualifications from './Qualifications';
 import Work from './Work';
 import Contact from './Contact';
-import { ToastContainer } from 'react-toastify';
 
 const findActiveLink = (links) => {
   return links.find((link) => link.active).linkDiv
@@ -22,6 +21,7 @@ const goToLink = (type) => {
     case 'fb': link = "https://www.facebook.com/vashist82"; break;
     case 'insta': link = "https://www.instagram.com/vashist797"; break;
     case 'twitter': link = "https://twitter.com/sachinvashist82"; break;
+    case 'resume':link="https://drive.google.com/file/d/1sWYvmWjs42dLvpzJ1pR80E7W_O0xoQdJ/view?usp=sharing";break;
     default://
   }
   window.open(link, '_blank', 'noopener,noreferrer')
@@ -37,23 +37,11 @@ function Main() {
         <BsArrowRight size={50} />
       </button>
       <Home goToLink={goToLink} />
-      <About />
+      <About goToLink={goToLink}/>
       <Skills />
       <Qualifications />
       <Work />
       <Contact goToLink={goToLink} />
-      <ToastContainer
-        position="bottom-right"
-        autoClose={3000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss={false}
-        draggable={false}
-        pauseOnHover={false}
-        className="cstToaster"
-      />
     </div>
   );
 }

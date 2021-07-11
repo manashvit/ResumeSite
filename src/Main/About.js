@@ -3,8 +3,10 @@ import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im';
 import { useDispatch } from 'react-redux';
 import { makeActive } from '../store/headerSlice';
 
-function About() {
-  const dispatch=useDispatch();
+function About(props) {
+  const dispatch = useDispatch(),
+    { goToLink } = props;
+
   return (
     <div className="aboutDiv">
       <div>
@@ -24,12 +26,12 @@ function About() {
           <i><ImQuotesLeft /> &nbsp; Believe in big ambitions and take subtle steps &nbsp;<ImQuotesRight /></i>
         </div>
         <div>
-          <button className='cstbtn nxtBtn' onClick={()=>dispatch(makeActive('skillsDiv'))}>
+          <button className='cstbtn nxtBtn' onClick={() => dispatch(makeActive('skillsDiv'))}>
             My Artillery
           </button>
-          {/* <button className='cstbtn diffBtn'>
+          <button className='cstbtn diffBtn' onClick={() => goToLink('resume')}>
             Download CV
-          </button> */}
+          </button>
         </div>
       </div>
     </div>
