@@ -21,7 +21,7 @@ const goToLink = (type) => {
     case 'fb': link = "https://www.facebook.com/vashist82"; break;
     case 'insta': link = "https://www.instagram.com/vashist797"; break;
     case 'twitter': link = "https://twitter.com/sachinvashist82"; break;
-    case 'resume':link="https://drive.google.com/file/d/1sWYvmWjs42dLvpzJ1pR80E7W_O0xoQdJ/view?usp=sharing";break;
+    case 'resume':link="https://drive.google.com/file/d/1M2ErjAkJUugiy2YS63_pk9aQhsy0q3-g/view?usp=sharing";break;
     default://
   }
   window.open(link, '_blank', 'noopener,noreferrer')
