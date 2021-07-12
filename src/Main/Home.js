@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaMobileAlt, FaGooglePlusG, FaLinkedinIn } from 'react-icons/fa';
+import { FaMobileAlt, FaGooglePlusG, FaLinkedinIn,FaFileAlt } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { makeActive } from '../store/headerSlice';
 
@@ -27,6 +27,7 @@ function Home(props) {
           </span>
           <span onClick={() => goToLink('linkedin')}><FaLinkedinIn /></span>
           <span onClick={() => goToLink('mail')}><FaGooglePlusG /></span>
+          <span onClick={() => goToLink('resume')}><FaFileAlt /></span>
         </p>
         <div style={{ lineHeight: 1.5 }}>I’m eager to receive your feedback...<br /><b>Thank You :)</b>  </div>
         <button className='cstbtn' onClick={() => handleHire(!showHire)}>
