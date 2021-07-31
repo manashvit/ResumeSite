@@ -422,7 +422,6 @@ div.skillsDiv, div.qualDiv, div.workDiv, div.contactDiv {
 }
 
 .skillsCard>div img, .skillsCard>div svg {
-    width: 80px;
     height: 80px;
     color: white;
 }
