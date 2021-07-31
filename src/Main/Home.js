@@ -1,19 +1,31 @@
-import { useState } from 'react';
-import { FaMobileAlt, FaGooglePlusG, FaLinkedinIn,FaFileAlt } from 'react-icons/fa';
+import {useContext, useReducer } from 'react';
+import { FaMobileAlt, FaGooglePlusG, FaLinkedinIn, FaFileAlt } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { makeActive } from '../store/headerSlice';
+import { TopContext } from '../App';
 
+const showHireFun = (state, action) => {
+  switch (action.type) {
+    case 'home': return false;
+    case 'hire': return true;
+    default: return state
+  }
+}
 function Home(props) {
-  const [showHire, handleHire] = useState(false),
+  const [showHireReduce, showHireDispatch] = useReducer(showHireFun, false),
     dispatch = useDispatch(),
-    { goToLink } = props;
+    { goToLink } = props,
+    { name } = useContext(TopContext)
 
   return (
-    <div className={"homeDiv " + (showHire ? 'addHire' : '')}>
+    <div className={"homeDiv " + (showHireReduce ? 'addHire' : '')}>
       <div>
-        <p>I'm Sachin</p>
+        {/* <TopContext.Consumer>
+          {data=><p>I'm {data.name}</p>}
+        </TopContext.Consumer> */}
+        <p>I'm {name}</p>
         <div>Enthusiastic Full stack Web Developer</div>
-        <button className='cstbtn' onClick={() => handleHire(!showHire)}>
+        <button className='cstbtn' onClick={() => showHireDispatch({ type: 'hire' })}>
           Hire Me
         </button>
         <button className='cstbtn diffBtn' onClick={() => dispatch(makeActive('aboutDiv'))}>
@@ -30,7 +42,7 @@ function Home(props) {
           <span onClick={() => goToLink('resume')}><FaFileAlt /></span>
         </p>
         <div style={{ lineHeight: 1.5 }}>I’m eager to receive your feedback...<br /><b>Thank You :)</b>  </div>
-        <button className='cstbtn' onClick={() => handleHire(!showHire)}>
+        <button className='cstbtn' onClick={() => showHireDispatch({ type: 'home' })}>
           Back
         </button>
       </div>

@@ -2,9 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios';
 import { toast, Slide } from 'react-toastify';
 
-// const reqUrl = 'process.env.REACT_APP_HOSTURL'
-const reqUrl = 'https://resumesitebackend.herokuapp.com/api'
-
+const reqUrl = process.env.REACT_APP_HOSTURL
 
 export const sendMsg = createAsyncThunk(
     'contactData/sendMsg',
