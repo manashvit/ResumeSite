@@ -4,13 +4,15 @@ import skillsRed from './skillsSlice';
 import qualRed from './qualSlice';
 import workRed from './workSlice';
 import contactRed from './contactSlice'
+import geekRed from './geekSlice'
 const store = configureStore({
   reducer: {
     headerLinks:headerRed,
     skillsData:skillsRed,
     qualData:qualRed,
     workData:workRed,
-    contactData:contactRed
+    contactData:contactRed,
+    geekData:geekRed,
   },
 })
 
