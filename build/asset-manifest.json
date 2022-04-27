@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ResumeSite/static/css/main.e805abdc.chunk.css",
-    "main.js": "/ResumeSite/static/js/main.47063f5a.chunk.js",
-    "main.js.map": "/ResumeSite/static/js/main.47063f5a.chunk.js.map",
+    "main.js": "/ResumeSite/static/js/main.534a9545.chunk.js",
+    "main.js.map": "/ResumeSite/static/js/main.534a9545.chunk.js.map",
     "runtime-main.js": "/ResumeSite/static/js/runtime-main.b075afd6.js",
     "runtime-main.js.map": "/ResumeSite/static/js/runtime-main.b075afd6.js.map",
     "static/css/2.97503911.chunk.css": "/ResumeSite/static/css/2.97503911.chunk.css",
@@ -12,6 +12,7 @@
     "static/css/2.97503911.chunk.css.map": "/ResumeSite/static/css/2.97503911.chunk.css.map",
     "static/css/main.e805abdc.chunk.css.map": "/ResumeSite/static/css/main.e805abdc.chunk.css.map",
     "static/js/2.bfe64a19.chunk.js.LICENSE.txt": "/ResumeSite/static/js/2.bfe64a19.chunk.js.LICENSE.txt",
+    "static/media/accenture.56859e78.png": "/ResumeSite/static/media/accenture.56859e78.png",
     "static/media/genpact.f1d7348f.png": "/ResumeSite/static/media/genpact.f1d7348f.png",
     "static/media/honda.8c69b901.png": "/ResumeSite/static/media/honda.8c69b901.png",
     "static/media/geek.css": "/ResumeSite/static/media/loader.50cd3412.gif",
@@ -25,6 +26,6 @@
     "static/css/2.97503911.chunk.css",
     "static/js/2.bfe64a19.chunk.js",
     "static/css/main.e805abdc.chunk.css",
-    "static/js/main.47063f5a.chunk.js"
+    "static/js/main.534a9545.chunk.js"
   ]
 }
