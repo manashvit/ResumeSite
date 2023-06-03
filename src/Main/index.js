@@ -15,13 +15,13 @@ const findActiveLink = (links) => {
 const goToLink = (type) => {
   let link = ''
   switch (type) {
-    case 'linkedin': link = "https://www.linkedin.com/in/sachin-vashist"; break;
-    case 'mail': link = "mailto: sachinvashist82@gmail.com"; break;
+    case 'linkedin': link = "https://www.linkedin.com/in/manashvitripathi"; break;
+    case 'mail': link = "mailto: manashvit@gmail.com"; break;
     case 'github': link = "https://github.com/ErSachinVashist"; break;
     case 'fb': link = "https://www.facebook.com/vashist82"; break;
     case 'insta': link = "https://www.instagram.com/vashist797"; break;
     case 'twitter': link = "https://twitter.com/sachinvashist82"; break;
-    case 'resume':link="https://drive.google.com/file/d/1M2ErjAkJUugiy2YS63_pk9aQhsy0q3-g/view?usp=sharing";break;
+    case 'resume':link="https://drive.google.com/file/d/1ninqsT4UGphmXXEfj6qmIajVZEGgKzh-/view?usp=sharing";break;
     default://
   }
   window.open(link, '_blank', 'noopener,noreferrer')

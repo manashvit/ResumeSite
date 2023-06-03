@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 export const TopContext = createContext()
 
 function App() {
-  const [name]=useState('Sachin')
+  const [name]=useState('Manashvi')
   return (
     <div className="App">
       <Header />

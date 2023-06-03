@@ -29,9 +29,9 @@ function Header() {
             }}>
                 {!openMenu ? <CgMenuGridR /> : <CgClose />}
             </div>
-            <div className={"cstNav " + (openMenu ? 'open' : '')}>
+            {/* <div className={"cstNav " + (openMenu ? 'open' : '')}>
                 {linkArray.map((link, index) => <span key={index} onClick={() => handleLink(link.linkDiv)} className={link.active ? 'active' : ''}> {link.title} </span>)}
-            </div >
+            </div > */}
         </div>
     );
 }

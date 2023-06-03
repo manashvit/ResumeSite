@@ -24,18 +24,18 @@ function Home(props) {
           {data=><p>I'm {data.name}</p>}
         </TopContext.Consumer> */}
         <p>I'm {name}</p>
-        <div>Enthusiastic Full stack Web Developer</div>
+        <div>Sales & Marketing Expert</div>
         <button className='cstbtn' onClick={() => showHireDispatch({ type: 'hire' })}>
-          Hire Me
+          About Me
         </button>
-        <button className='cstbtn diffBtn' onClick={() => dispatch(makeActive('aboutDiv'))}>
+        {/* <button className='cstbtn diffBtn' onClick={() => dispatch(makeActive('aboutDiv'))}>
           About me
-        </button>
+        </button> */}
       </div>
       <div>
         <p className='iconsDiv'>
           <span className='hoverTitle'><FaMobileAlt />
-            <b>+918860496464</b>
+            <b>+918800896164</b>
           </span>
           <span onClick={() => goToLink('linkedin')}><FaLinkedinIn /></span>
           <span onClick={() => goToLink('mail')}><FaGooglePlusG /></span>
